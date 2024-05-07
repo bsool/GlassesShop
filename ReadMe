@@ -1,0 +1,19 @@
+When Application is run with the default configurations it will initial the liquibase scripts initialize the database.
+
+Currently the database is an H2 instance run in memory for the purpose of the P.O.C, this means it will re-instantiate the database to the same init state on every boot.
+To access view the DB, (while running app) http://localhost:8080/glasses-shop/console/
+
+There Are 2 Users, use the headers (username,password) in api requests to see results for each (frames will hide inactive from the non admin user):
+    Admin
+        username:admin
+        password:admin
+    User
+        username:user
+        password:user
+
+The update endpoints will create a new item if no IDs are present, otherwise it will update for the existing id.
+
+For API Details:
+    POSTMAN Collection:     found in the postman folder, you can import it into your postman workspace for api calls including credentials
+                            collection also contains tested examples.
+    SWAGGER: (when running app) http://localhost:8080/glasses-shop/swagger-ui.html#

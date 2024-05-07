@@ -1,0 +1,993 @@
+{
+	"info": {
+		"_postman_id": "45dbb986-1035-468f-9e15-383be61a4b30",
+		"name": "Glassses",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32193721"
+	},
+	"item": [
+		{
+			"name": "get frames | USER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "username",
+						"value": "user",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "user",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/glasses-shop/rest/product/frame",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"glasses-shop",
+						"rest",
+						"product",
+						"frame"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get frames | USER",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "username",
+								"value": "user",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "user",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/glasses-shop/rest/product/frame",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"glasses-shop",
+								"rest",
+								"product",
+								"frame"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Set-Cookie",
+							"value": "JSESSIONID=B75D3662B01A363E88212E63F31E1A3F; Path=/glasses-shop; HttpOnly"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 May 2024 19:07:50 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"inventoryItem\": {\n            \"id\": 1,\n            \"description\": \"blue frames\",\n            \"priceUSD\": 22,\n            \"priceGBP\": 28,\n            \"priceEUR\": 25,\n            \"priceJOD\": 16,\n            \"priceJPY\": 100,\n            \"stock\": 2,\n            \"inventoryItemType\": {\n                \"id\": 1,\n                \"typeCode\": 1,\n                \"typeName\": \"frame\"\n            }\n        },\n        \"id\": 1,\n        \"active\": true,\n        \"name\": \"\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get frames | ADMIN",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "username",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/glasses-shop/rest/product/frame",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"glasses-shop",
+						"rest",
+						"product",
+						"frame"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get frames | USER Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "username",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "admin",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/glasses-shop/rest/product/frame",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"glasses-shop",
+								"rest",
+								"product",
+								"frame"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 May 2024 19:11:34 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"inventoryItem\": {\n            \"id\": 1,\n            \"description\": \"blue frames\",\n            \"priceUSD\": 22,\n            \"priceGBP\": 28,\n            \"priceEUR\": 25,\n            \"priceJOD\": 16,\n            \"priceJPY\": 100,\n            \"stock\": 2,\n            \"inventoryItemType\": {\n                \"id\": 1,\n                \"typeCode\": 1,\n                \"typeName\": \"frame\"\n            }\n        },\n        \"id\": 1,\n        \"active\": true,\n        \"name\": \"\"\n    },\n    {\n        \"inventoryItem\": {\n            \"id\": 2,\n            \"description\": \"green frames\",\n            \"priceUSD\": 25,\n            \"priceGBP\": 30,\n            \"priceEUR\": 29,\n            \"priceJOD\": 17,\n            \"priceJPY\": 110,\n            \"stock\": 10,\n            \"inventoryItemType\": {\n                \"id\": 1,\n                \"typeCode\": 1,\n                \"typeName\": \"frame\"\n            }\n        },\n        \"id\": 2,\n        \"active\": false,\n        \"name\": \"\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get lenses | USER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "username",
+						"value": "user",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "user",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/glasses-shop/rest/product/lens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"glasses-shop",
+						"rest",
+						"product",
+						"lens"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get lenses | USER",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "username",
+								"value": "user",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "user",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/glasses-shop/rest/product/lens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"glasses-shop",
+								"rest",
+								"product",
+								"lens"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 May 2024 19:11:45 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"inventoryItem\": {\n            \"id\": 3,\n            \"description\": \"black lenses\",\n            \"priceUSD\": 30,\n            \"priceGBP\": 35,\n            \"priceEUR\": 33,\n            \"priceJOD\": 21,\n            \"priceJPY\": 150,\n            \"stock\": 1,\n            \"inventoryItemType\": {\n                \"id\": 2,\n                \"typeCode\": 2,\n                \"typeName\": \"lens\"\n            }\n        },\n        \"id\": 1,\n        \"colour\": \"black\",\n        \"lensType\": {\n            \"id\": 1,\n            \"typeCode\": 1,\n            \"typeName\": \"classic\"\n        },\n        \"prescriptionType\": {\n            \"id\": 2,\n            \"typeCode\": 2,\n            \"typeName\": \"single vision\"\n        }\n    },\n    {\n        \"inventoryItem\": {\n            \"id\": 4,\n            \"description\": \"brown lenses\",\n            \"priceUSD\": 30,\n            \"priceGBP\": 35,\n            \"priceEUR\": 33,\n            \"priceJOD\": 21,\n            \"priceJPY\": 150,\n            \"stock\": 5,\n            \"inventoryItemType\": {\n                \"id\": 2,\n                \"typeCode\": 2,\n                \"typeName\": \"lens\"\n            }\n        },\n        \"id\": 2,\n        \"colour\": \"brown\",\n        \"lensType\": {\n            \"id\": 2,\n            \"typeCode\": 2,\n            \"typeName\": \"blue light\"\n        },\n        \"prescriptionType\": {\n            \"id\": 3,\n            \"typeCode\": 3,\n            \"typeName\": \"medical\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "make order | USER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "username",
+						"value": "user",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "user",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"frame\": {\r\n        \"id\": 1\r\n    },\r\n    \"lens\": {\r\n        \"id\": 0\r\n    },\r\n    \"currencyCode\": \"JOD\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/glasses-shop/rest/product/purchase",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"glasses-shop",
+						"rest",
+						"product",
+						"purchase"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SUCCESS",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "username",
+								"value": "user",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "user",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"frame\": {\r\n        \"id\": 1\r\n    },\r\n    \"lens\": {\r\n        \"id\": 1\r\n    },\r\n    \"currencyCode\": \"JOD\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/glasses-shop/rest/product/purchase",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"glasses-shop",
+								"rest",
+								"product",
+								"purchase"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 May 2024 19:23:57 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"lens\": {\n        \"inventoryItem\": {\n            \"id\": 3,\n            \"description\": \"black lenses\",\n            \"priceUSD\": 30,\n            \"priceGBP\": 35,\n            \"priceEUR\": 33,\n            \"priceJOD\": 21,\n            \"priceJPY\": 150,\n            \"stock\": 1,\n            \"inventoryItemType\": {\n                \"id\": 2,\n                \"typeCode\": 2,\n                \"typeName\": \"lens\"\n            }\n        },\n        \"id\": 1,\n        \"colour\": \"black\",\n        \"lensType\": {\n            \"id\": 1,\n            \"typeCode\": 1,\n            \"typeName\": \"classic\"\n        },\n        \"prescriptionType\": {\n            \"id\": 2,\n            \"typeCode\": 2,\n            \"typeName\": \"single vision\"\n        }\n    },\n    \"lensCost\": 21,\n    \"frame\": {\n        \"inventoryItem\": {\n            \"id\": 1,\n            \"description\": \"blue frames\",\n            \"priceUSD\": 22,\n            \"priceGBP\": 28,\n            \"priceEUR\": 25,\n            \"priceJOD\": 16,\n            \"priceJPY\": 100,\n            \"stock\": 2,\n            \"inventoryItemType\": {\n                \"id\": 1,\n                \"typeCode\": 1,\n                \"typeName\": \"frame\"\n            }\n        },\n        \"id\": 1,\n        \"active\": true,\n        \"name\": \"\"\n    },\n    \"frameCost\": 16,\n    \"purchase_date\": null,\n    \"totalCost\": 37,\n    \"currencyCode\": \"JOD\"\n}"
+				},
+				{
+					"name": "FAIL: LENS OUT OF STOCK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "username",
+								"value": "user",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "user",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"frame\": {\r\n        \"id\": 1\r\n    },\r\n    \"lens\": {\r\n        \"id\": 1\r\n    },\r\n    \"currencyCode\": \"JOD\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/glasses-shop/rest/product/purchase",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"glasses-shop",
+								"rest",
+								"product",
+								"purchase"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 May 2024 19:24:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errorCode\": \"401\",\n    \"errorMessage\": \"not enough lenses in stock\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Frame",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "username",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"inventoryItem\": {\r\n        \"id\": 1,\r\n        \"description\": \"blue updated frames description\",\r\n        \"priceUSD\": 22,\r\n        \"priceGBP\": 28,\r\n        \"priceEUR\": 25,\r\n        \"priceJOD\": 16,\r\n        \"priceJPY\": 100,\r\n        \"stock\": 2,\r\n        \"inventoryItemType\": {\r\n            \"id\": 1,\r\n            \"typeCode\": 1,\r\n            \"typeName\": \"frame\"\r\n        }\r\n    },\r\n    \"id\": 1,\r\n    \"active\": false,\r\n    \"name\": \"blue update frames\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/glasses-shop/rest/inventory/frame",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"glasses-shop",
+						"rest",
+						"inventory",
+						"frame"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Added New Frame",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "username",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \"active\": true,  \"inventoryItem\": {    \"description\": \"test frame\",    \"inventoryItemType\": {      \"typeCode\": 1    },    \"priceEUR\": 1,    \"priceGBP\": 2,    \"priceJOD\": 3,    \"priceJPY\": 4,    \"priceUSD\": 5,    \"stock\": 4  },  \"name\": \"testing frames\"}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/glasses-shop/rest/inventory/frame",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"glasses-shop",
+								"rest",
+								"inventory",
+								"frame"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 May 2024 19:27:25 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"inventoryItem\": {\n        \"id\": 5,\n        \"description\": \"test frame\",\n        \"priceUSD\": 5,\n        \"priceGBP\": 2,\n        \"priceEUR\": 1,\n        \"priceJOD\": 3,\n        \"priceJPY\": 4,\n        \"stock\": 4,\n        \"inventoryItemType\": {\n            \"id\": 1,\n            \"typeCode\": 1,\n            \"typeName\": \"frame\"\n        }\n    },\n    \"id\": 3,\n    \"active\": true,\n    \"name\": \"testing frames\"\n}"
+				},
+				{
+					"name": "Updated Existing Frame",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "username",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"inventoryItem\": {\r\n        \"id\": 1,\r\n        \"description\": \"blue updated frames description\",\r\n        \"priceUSD\": 22,\r\n        \"priceGBP\": 28,\r\n        \"priceEUR\": 25,\r\n        \"priceJOD\": 16,\r\n        \"priceJPY\": 100,\r\n        \"stock\": 2,\r\n        \"inventoryItemType\": {\r\n            \"id\": 1,\r\n            \"typeCode\": 1,\r\n            \"typeName\": \"frame\"\r\n        }\r\n    },\r\n    \"id\": 1,\r\n    \"active\": false,\r\n    \"name\": \"blue update frames\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/glasses-shop/rest/inventory/frame",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"glasses-shop",
+								"rest",
+								"inventory",
+								"frame"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 May 2024 19:32:58 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"inventoryItem\": {\n        \"id\": 1,\n        \"description\": \"blue updated frames description\",\n        \"priceUSD\": 22,\n        \"priceGBP\": 28,\n        \"priceEUR\": 25,\n        \"priceJOD\": 16,\n        \"priceJPY\": 100,\n        \"stock\": 2,\n        \"inventoryItemType\": {\n            \"id\": 1,\n            \"typeCode\": 1,\n            \"typeName\": \"frame\"\n        }\n    },\n    \"id\": 1,\n    \"active\": false,\n    \"name\": \"blue update frames\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Lens",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "username",
+						"value": "admin",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"inventoryItem\": {\r\n        \"description\": \"rose lenses\",\r\n        \"priceUSD\": 30,\r\n        \"priceGBP\": 35,\r\n        \"priceEUR\": 33,\r\n        \"priceJOD\": 21,\r\n        \"priceJPY\": 150,\r\n        \"stock\": 5,\r\n        \"inventoryItemType\": {\r\n            \"typeCode\": 2\r\n        }\r\n    },\r\n    \"colour\": \"rose\",\r\n    \"lensType\": {\r\n        \"typeCode\": 2\r\n    },\r\n    \"prescriptionType\": {\r\n        \"typeCode\": 3\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/glasses-shop/rest/inventory/lens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"glasses-shop",
+						"rest",
+						"inventory",
+						"lens"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Added New Lens",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "username",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"inventoryItem\": {\r\n        \"description\": \"rose lenses\",\r\n        \"priceUSD\": 30,\r\n        \"priceGBP\": 35,\r\n        \"priceEUR\": 33,\r\n        \"priceJOD\": 21,\r\n        \"priceJPY\": 150,\r\n        \"stock\": 5,\r\n        \"inventoryItemType\": {\r\n            \"typeCode\": 2\r\n        }\r\n    },\r\n    \"colour\": \"rose\",\r\n    \"lensType\": {\r\n        \"typeCode\": 2\r\n    },\r\n    \"prescriptionType\": {\r\n        \"typeCode\": 3\r\n    }\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/glasses-shop/rest/inventory/lens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"glasses-shop",
+								"rest",
+								"inventory",
+								"lens"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 May 2024 19:36:16 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"inventoryItem\": {\n        \"id\": 6,\n        \"description\": \"rose lenses\",\n        \"priceUSD\": 30,\n        \"priceGBP\": 35,\n        \"priceEUR\": 33,\n        \"priceJOD\": 21,\n        \"priceJPY\": 150,\n        \"stock\": 5,\n        \"inventoryItemType\": {\n            \"id\": 2,\n            \"typeCode\": 2,\n            \"typeName\": \"lens\"\n        }\n    },\n    \"id\": 3,\n    \"colour\": \"rose\",\n    \"lensType\": {\n        \"id\": 3,\n        \"typeCode\": 3,\n        \"typeName\": \"transition\"\n    },\n    \"prescriptionType\": {\n        \"id\": 3,\n        \"typeCode\": 3,\n        \"typeName\": \"medical\"\n    }\n}"
+				},
+				{
+					"name": "Updated Existing Lens",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "username",
+								"value": "admin",
+								"type": "text"
+							},
+							{
+								"key": "password",
+								"value": "admin",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"inventoryItem\": {\r\n            \"id\": 4,\r\n            \"description\": \"yellow from brown lenses\",\r\n            \"priceUSD\": 30,\r\n            \"priceGBP\": 35,\r\n            \"priceEUR\": 33,\r\n            \"priceJOD\": 21,\r\n            \"priceJPY\": 150,\r\n            \"stock\": 5,\r\n            \"inventoryItemType\": {\r\n                \"typeCode\": 2\r\n            }\r\n        },\r\n        \"id\": 2,\r\n        \"colour\": \"yellow from brown\",\r\n        \"lensType\": {\r\n            \"typeCode\": 2\r\n        },\r\n        \"prescriptionType\": {\r\n            \"typeCode\": 3\r\n        }\r\n    }"
+						},
+						"url": {
+							"raw": "http://localhost:8080/glasses-shop/rest/inventory/lens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"glasses-shop",
+								"rest",
+								"inventory",
+								"lens"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 05 May 2024 19:38:01 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"inventoryItem\": {\n        \"id\": 4,\n        \"description\": \"brown lenses\",\n        \"priceUSD\": 30,\n        \"priceGBP\": 35,\n        \"priceEUR\": 33,\n        \"priceJOD\": 21,\n        \"priceJPY\": 150,\n        \"stock\": 5,\n        \"inventoryItemType\": {\n            \"id\": 2,\n            \"typeCode\": 2,\n            \"typeName\": \"lens\"\n        }\n    },\n    \"id\": 2,\n    \"colour\": \"yellow from brown\",\n    \"lensType\": {\n        \"id\": 3,\n        \"typeCode\": 3,\n        \"typeName\": \"transition\"\n    },\n    \"prescriptionType\": {\n        \"id\": 3,\n        \"typeCode\": 3,\n        \"typeName\": \"medical\"\n    }\n}"
+				}
+			]
+		}
+	]
+}

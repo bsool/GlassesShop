@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="initial-database-schema" author="mbsoul">
+        <createTable tableName="inventory_item_type">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_inventory_item_type"/>
+            </column>
+            <column name="type_code" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addUniqueConstraint columnNames="type_code" constraintName="uc_inventory_item_type_type_code"
+                             tableName="inventory_item_type"/>
+
+        <createTable tableName="inventory_item">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_inventory_item"/>
+            </column>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="price_usd" type="FLOAT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price_gbp" type="FLOAT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price_eur" type="FLOAT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price_jod" type="FLOAT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price_jpy" type="FLOAT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="stock" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="inventory_item_type_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="inventory_item_type_id" baseTableName="inventory_item" constraintName="FK_INVENTORY_ITEM_ON_INVENTORY_ITEM_TYPE" referencedColumnNames="id" referencedTableName="inventory_item_type"/>
+
+        <createTable tableName="frame">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_frame"/>
+            </column>
+            <column name="active" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="inventory_item_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addUniqueConstraint columnNames="inventory_item_id" constraintName="uc_frame_inventory_item"
+                             tableName="frame"/>
+        <addForeignKeyConstraint baseColumnNames="inventory_item_id" baseTableName="frame"
+                                 constraintName="FK_FRAME_ON_INVENTORY_ITEM" referencedColumnNames="id"
+                                 referencedTableName="inventory_item"/>
+
+        <createTable tableName="lens_type">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_lens_type"/>
+            </column>
+            <column name="type_code" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addUniqueConstraint columnNames="type_code" constraintName="uc_lens_type_type_code" tableName="lens_type"/>
+
+        <createTable tableName="prescription_type">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_prescription_type"/>
+            </column>
+            <column name="type_code" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addUniqueConstraint columnNames="type_code" constraintName="uc_prescription_type_type_code"
+                             tableName="prescription_type"/>
+        <createTable tableName="lens">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_lens"/>
+            </column>
+            <column name="inventory_item_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="colour" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="lens_type_code" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="prescription_type_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addUniqueConstraint columnNames="inventory_item_id" constraintName="uc_lens_inventory_item" tableName="lens"/>
+        <addForeignKeyConstraint baseColumnNames="inventory_item_id" baseTableName="lens"
+                                 constraintName="FK_LENS_ON_INVENTORY_ITEM" referencedColumnNames="id"
+                                 referencedTableName="inventory_item"/>
+        <addForeignKeyConstraint baseColumnNames="lens_type_code" baseTableName="lens"
+                                 constraintName="FK_LENS_ON_LENS_TYPE_CODE" referencedColumnNames="id"
+                                 referencedTableName="lens_type"/>
+        <addForeignKeyConstraint baseColumnNames="prescription_type_id" baseTableName="lens"
+                                 constraintName="FK_LENS_ON_PRESCRIPTION_TYPE" referencedColumnNames="id"
+                                 referencedTableName="prescription_type"/>
+
+        <createTable tableName="entity_user">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_entity_user"/>
+            </column>
+            <column name="username" type="VARCHAR(255)"/>
+            <column name="password" type="VARCHAR(255)"/>
+            <column name="admin" type="BOOLEAN">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="currency_type">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_currency_type"/>
+            </column>
+            <column name="type_code" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addUniqueConstraint columnNames="type_code" constraintName="uc_currency_type_type_code" tableName="currency_type"/>
+
+        <createTable tableName="purchase_order">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="pk_purchase_order"/>
+            </column>
+            <column name="lens_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="lens_cost" type="FLOAT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="frame_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="frame_cost" type="FLOAT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="purchase_date" type="DATETIME"/>
+            <column name="total_cost" type="FLOAT"/>
+            <column name="currency_code" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="frame_id" baseTableName="purchase_order" constraintName="FK_PURCHASE_ORDER_ON_FRAME" referencedColumnNames="id" referencedTableName="frame"/>
+        <addForeignKeyConstraint baseColumnNames="lens_id" baseTableName="purchase_order" constraintName="FK_PURCHASE_ORDER_ON_LENS" referencedColumnNames="id" referencedTableName="lens"/>
+
+
+    </changeSet>
+
+
+</databaseChangeLog>

@@ -1,0 +1,148 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="insert-change-set" author="mbsoul">
+        <insert tableName="inventory_item_type">
+            <column name="type_code" valueNumeric="1"/>
+            <column name="type_name" value="frame"/>
+        </insert>
+        <insert tableName="inventory_item_type">
+            <column name="type_code" valueNumeric="2"/>
+            <column name="type_name" value="lens"/>
+        </insert>
+
+        <insert tableName="prescription_type">
+            <column name="type_code" valueNumeric="1"/>
+            <column name="type_name" value="fashion"/>
+        </insert>
+        <insert tableName="prescription_type">
+            <column name="type_code" valueNumeric="2"/>
+            <column name="type_name" value="single vision"/>
+        </insert>
+        <insert tableName="prescription_type">
+            <column name="type_code" valueNumeric="3"/>
+            <column name="type_name" value="medical"/>
+        </insert>
+
+        <insert tableName="lens_type">
+            <column name="type_code" valueNumeric="1"/>
+            <column name="type_name" value="classic"/>
+        </insert>
+        <insert tableName="lens_type">
+            <column name="type_code" valueNumeric="2"/>
+            <column name="type_name" value="blue light"/>
+        </insert>
+        <insert tableName="lens_type">
+            <column name="type_code" valueNumeric="3"/>
+            <column name="type_name" value="transition"/>
+        </insert>
+
+        <insert tableName="entity_user">
+            <column name="admin" valueBoolean="true"/>
+            <column name="username" value="admin"/>
+            <column name="password" value="admin"/>
+        </insert>
+        <insert tableName="entity_user">
+            <column name="admin" valueBoolean="false"/>
+            <column name="username" value="user"/>
+            <column name="password" value="user"/>
+        </insert>
+
+
+        <insert tableName="inventory_item">
+            <column name="id" valueNumeric="1"/>
+            <column name="description" value="blue frames"/>
+            <column name="price_usd" valueNumeric="22"/>
+            <column name="price_gbp" valueNumeric="28"/>
+            <column name="price_eur" valueNumeric="25"/>
+            <column name="price_jod" valueNumeric="16"/>
+            <column name="price_jpy" valueNumeric="100"/>
+            <column name="stock" valueNumeric="2"/>
+            <column name="inventory_item_type_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="frame">
+            <column name="active" valueBoolean="true"/>
+            <column name="name" value=""/>
+            <column name="inventory_item_id" valueNumeric="1"/>
+        </insert>
+
+        <insert tableName="inventory_item">
+            <column name="id" valueNumeric="2"/>
+            <column name="description" value="green frames"/>
+            <column name="price_usd" valueNumeric="25"/>
+            <column name="price_gbp" valueNumeric="30"/>
+            <column name="price_eur" valueNumeric="29"/>
+            <column name="price_jod" valueNumeric="17"/>
+            <column name="price_jpy" valueNumeric="110"/>
+            <column name="stock" valueNumeric="10"/>
+            <column name="inventory_item_type_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="frame">
+            <column name="active" valueBoolean="false"/>
+            <column name="name" value=""/>
+            <column name="inventory_item_id" valueNumeric="2"/>
+        </insert>
+
+        <insert tableName="inventory_item">
+            <column name="id" valueNumeric="3"/>
+            <column name="description" value="black lenses"/>
+            <column name="price_usd" valueNumeric="30"/>
+            <column name="price_gbp" valueNumeric="35"/>
+            <column name="price_eur" valueNumeric="33"/>
+            <column name="price_jod" valueNumeric="21"/>
+            <column name="price_jpy" valueNumeric="150"/>
+            <column name="stock" valueNumeric="1"/>
+            <column name="inventory_item_type_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="lens">
+            <column name="inventory_item_id" valueNumeric="3"/>
+            <column name="colour" value="black"/>
+            <column name="lens_type_code" valueNumeric="1"/>
+            <column name="prescription_type_id" valueNumeric="2"/>
+        </insert>
+
+        <insert tableName="inventory_item">
+            <column name="id" valueNumeric="4"/>
+            <column name="description" value="brown lenses"/>
+            <column name="price_usd" valueNumeric="30"/>
+            <column name="price_gbp" valueNumeric="35"/>
+            <column name="price_eur" valueNumeric="33"/>
+            <column name="price_jod" valueNumeric="21"/>
+            <column name="price_jpy" valueNumeric="150"/>
+            <column name="stock" valueNumeric="5"/>
+            <column name="inventory_item_type_id" valueNumeric="2"/>
+        </insert>
+        <insert tableName="lens">
+            <column name="inventory_item_id" valueNumeric="4"/>
+            <column name="colour" value="brown"/>
+            <column name="lens_type_code" valueNumeric="2"/>
+            <column name="prescription_type_id" valueNumeric="3"/>
+        </insert>
+
+        <insert tableName="currency_type">
+            <column name="type_code" valueNumeric="1"/>
+            <column name="type_name" value="USD"/>
+        </insert>
+        <insert tableName="currency_type">
+            <column name="type_code" valueNumeric="2"/>
+            <column name="type_name" value="GBP"/>
+        </insert>
+        <insert tableName="currency_type">
+            <column name="type_code" valueNumeric="3"/>
+            <column name="type_name" value="EUR"/>
+        </insert>
+        <insert tableName="currency_type">
+            <column name="type_code" valueNumeric="4"/>
+            <column name="type_name" value="JOD"/>
+        </insert>
+        <insert tableName="currency_type">
+            <column name="type_code" valueNumeric="5"/>
+            <column name="type_name" value="JPY"/>
+        </insert>
+
+
+    </changeSet>
+</databaseChangeLog>
